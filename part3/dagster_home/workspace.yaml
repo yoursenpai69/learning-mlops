@@ -1,0 +1,4 @@
+load_from:
+  - python_file:
+      relative_path: "../alt-workflow.py"
+      location_name: "alt-workflow.py"

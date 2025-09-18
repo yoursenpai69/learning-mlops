@@ -1,0 +1,31 @@
+local_artifact_storage:
+  module: dagster._core.storage.root
+  class: LocalArtifactStorage
+  config:
+    base_dir: /workspaces/learning-mlops/part3/dagster_home/storage
+
+run_storage:
+  module: dagster._core.storage.runs
+  class: SqliteRunStorage
+  config:
+    base_dir: /workspaces/learning-mlops/part3/dagster_home/history
+
+event_log_storage:
+  module: dagster._core.storage.event_log
+  class: SqliteEventLogStorage
+  config:
+    base_dir: /workspaces/learning-mlops/part3/dagster_home/history
+
+compute_logs:
+  module: dagster._core.storage.local_compute_log_manager
+  class: LocalComputeLogManager
+  config:
+    base_dir: /workspaces/learning-mlops/part3/dagster_home/compute_logs
+
+run_coordinator:
+  module: dagster._core.run_coordinator
+  class: QueuedRunCoordinator
+
+run_launcher:
+  module: dagster._core.launcher
+  class: DefaultRunLauncher
