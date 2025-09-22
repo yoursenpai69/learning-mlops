@@ -1,0 +1,6 @@
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104203 - LOGS_CAPTURED - Started capturing logs in process (pid: 104203).
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104203 - get_month - STEP_START - Started execution of step "get_month".
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104203 - get_month - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - get_month - Writing file at: /workspaces/learning-mlops/part3/dagster_home/storage/storage/a7013454-d107-4239-b8bf-c23ca1ae7cf2/get_month/result using PickledObjectFilesystemIOManager...
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104203 - get_month - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-09-22 15:33:12 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104203 - get_month - STEP_SUCCESS - Finished execution of step "get_month" in 79ms.

@@ -10,7 +10,9 @@ import xgboost as xgb
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import root_mean_squared_error
 
-from dagster import job, op, Out, Definitions
+from dagster import job, op, Out, Definitions, schedule
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 import mlflow
 
@@ -22,13 +24,13 @@ models_folder.mkdir(exist_ok=True)
 
 
 @op
-def get_year():
-    return 2023
+def get_year(context):
+    return context.op_config["year"]
 
 
 @op
-def get_month():
-    return 3
+def get_month(context):
+    return context.op_config["month"]
 
 
 @op(out=Out(pd.DataFrame))
@@ -134,6 +136,24 @@ def run():
 
     train_model(X_train=train_out.X, y_train=y_train, X_val=val_out.X, y_val=y_val, dv=train_out.dv)
 
+@schedule(
+    cron_schedule="33 15 22 * *",  # run on the 1st of every month at midnight
+    job=run,
+    execution_timezone="UTC",
+)
+def monthly_schedule():
+    today = datetime.today()
+    train_date = today - relativedelta(months=6)
+
+    return {
+        "ops": {
+            "get_year": {"config": {"year": train_date.year}},
+            "get_month": {"config": {"month": train_date.month}},
+        }
+    }
+
+
 defs = Definitions(
     jobs=[run],
+    schedules=[monthly_schedule]
 )

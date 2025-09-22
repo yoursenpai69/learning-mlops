@@ -1,0 +1,6 @@
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - 72851 - LOGS_CAPTURED - Started capturing logs in process (pid: 72851).
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - 72851 - get_target - STEP_START - Started execution of step "get_target".
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - 72851 - get_target - STEP_OUTPUT - Yielded output "result" of type "String". (Type check passed).
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - get_target - Writing file at: /workspaces/learning-mlops/part3/dagster_home/storage/storage/84bc5b90-3c55-4efe-99b8-1d075b2eef97/get_target/result using PickledObjectFilesystemIOManager...
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - 72851 - get_target - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-09-22 15:12:18 +0000[0m - dagster - [34mDEBUG[0m - run - 84bc5b90-3c55-4efe-99b8-1d075b2eef97 - 72851 - get_target - STEP_SUCCESS - Finished execution of step "get_target" in 73ms.

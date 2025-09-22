@@ -1,0 +1,6 @@
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104456 - LOGS_CAPTURED - Started capturing logs in process (pid: 104456).
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104456 - get_year - STEP_START - Started execution of step "get_year".
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104456 - get_year - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - get_year - Writing file at: /workspaces/learning-mlops/part3/dagster_home/storage/storage/a7013454-d107-4239-b8bf-c23ca1ae7cf2/get_year/result using PickledObjectFilesystemIOManager...
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104456 - get_year - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-09-22 15:33:16 +0000[0m - dagster - [34mDEBUG[0m - run - a7013454-d107-4239-b8bf-c23ca1ae7cf2 - 104456 - get_year - STEP_SUCCESS - Finished execution of step "get_year" in 30ms.
