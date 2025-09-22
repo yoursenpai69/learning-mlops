@@ -61,14 +61,14 @@ def create_X(df: pd.DataFrame, dv=None):
     else:
         X = dv.transform(dicts)
 
-    return {"X":X, "dv":dv}
+    return (X, dv)
 
 
 @op(out={"year": Out(int), "month": Out(int)})
 def get_next_month(year: int, month: int):
     next_year = year if month < 12 else year + 1
     next_month = month + 1 if month < 12 else 1
-    return {"year":next_year, "month":next_month}
+    return (next_year, next_month)
 
 
 @op(out=Out(str))
