@@ -1,8 +1,8 @@
 import requests
 
 ride = {
-    "PULocationID": 60,
-    "DOLocationID": 100,
+    "PULocationID": 10,
+    "DOLocationID": 50,
     "trip_distance": 40
 }
 

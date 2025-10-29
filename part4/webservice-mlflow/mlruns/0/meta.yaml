@@ -1,0 +1,6 @@
+artifact_location: file:///workspaces/learning-mlops/part4/webservice-mlflow/mlruns/0
+creation_time: 1760267766257
+experiment_id: '0'
+last_update_time: 1760267766257
+lifecycle_stage: active
+name: Default
